@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>EJERCICIO3</title>
+</head>
+<body>
+
+<form>
+    <h1>FORMULARIO</h1>
+    <label for="nombre">Ingrese sus  datos completos:</label><br>
+        <input type="text" name="nom" id="nom" placeholder="NOMBRES COMPLETOS"/>
+        <br><br>
+        <label for="apellidos">Ingrese sus apellidos completos:</label><br>
+        <input type="text" name="ape" id="ape" placeholder="Apellidos COMPLETOS"/>
+        <br><br>
+        <label for="email">Email:</label><br>
+        <input type="email" name="email" id="email" placeholder="Email" required />
+        <br><br>
+        <label for="contraseña">Contraseña:</label><br>
+        <input type="password"  id="con" placeholder="Contraseña" required />
+        <br><br>
+        <label for="telefono">Telefono:</label> <br>
+        <input name="telefono" type="number" id="telefono" placeholder="numero Telefonico" required />
+         <br><br>
+        <label for="fecha">Fecha de nacimiento:</label> <br>
+        <input type="date" id="born" value="1990-01-01"  title="Fecha de Nacimiento">
+        <br><br>
+        <label for="fecha">Puntos:</label> <br>
+        <input id="puntuación" type="range" min="1" max="10" value="1" step="1">
+
+        <br><br> <p>¿CUAL ES SU INCOVENIENTE?</p>
+        <textarea name="comentario" id="" cols="20" rows="10" placeholder="lo leemos" ></textarea>
+
+    <input type="button" value="Validar" onclick="verDatos()">
+</form>
+
+<script type="text/javascript"> 
+    
+    function verDatos(){
+    let nom=document.getElementById('nom').value;
+    let ape=document.getElementById('ape').value;
+    let email=document.getElementById('email').value;
+    let telefono=document.getElementById('telefono').value;
+    let contra=document.getElementById('contra').value;
+    let born=document.getElementById('born').value;
+    let puntos=document.getElementById('puntuación').value;
+
+    alert("NOMBRES: "+ nom);
+    alert("APELLIDOS: "+ ape);
+    alert("CORREO ELECTRÓNICO: "+ email);
+    alert("NÚMERO TELEFÓNICO: "+ telefono);
+    alert("FECHA DE NACIMIENTO: "+ born);
+    alert("Puntos"+puntos);
+    
+    }
+
+    
+</script>
+</body>
